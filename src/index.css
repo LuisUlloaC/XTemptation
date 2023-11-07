@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+}
+
+
+:root {
+  --background: #940b92;
+  --text-primary: #f5f5f5;
+  --cardContainer: #f5f5f5;
+}
+
+[data-theme='dark'] {
+  --background: #352f44;
+  --text-primary: #ffffff;
+  --cardContainer: #580957;
+}
+
