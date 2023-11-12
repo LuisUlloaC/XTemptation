@@ -41,12 +41,10 @@ body {
   display: flex;
   flex-direction: column;
   flex-grow: 2;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   min-width: 20vw;
   height: 100vh;
-  padding-top: 10vh;
-  padding-bottom: 10vh;
   background-color: var(--darker_purple);
 }
 
@@ -54,15 +52,51 @@ body {
   display: flex;
   flex-direction: column;
   width: 80%;
-  height: 25%;
+  height: 50%;
   justify-content: space-evenly;
+  align-items: center;
+}
+
+.formLayout .tittle {
+  display: flex;
+  font-size: 2vw;
+  color: var(--white);
 }
 
 .formLayout .input {
   display: flex;
-  height: 25%;
-  background-color: ;
-  
+  height: 35%;
+  width: 100%;
+  margin-top: 5px;
+  border-radius: 6px;
+  font-size: 100%;
+  color: var(--white);
+  background-color: var(--background_darker_purple);
+}
+
+.formLayout .button {
+  display: flex;
+  height: 8%;
+  min-height: 30px;
+  width: 80%;
+  justify-content: center;
+  border-color: var(--black);
+  border-radius: 8px;
+  font-size: 100%;
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.formLayout .footer {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.formLayout .link {
+  display: flex;
+  color: var(--white);
 }
 
 .article-card {

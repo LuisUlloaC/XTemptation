@@ -5,18 +5,21 @@ export const LoginForm = () => {
 
 
     return (
-        <div className="container" style={theme.container}>
+        <div className="container" >
             <AuthLeftGrid />
-            <div className="authRightGrid" style={theme.rightGrid}>
-                <h1>Login</h1>
-                <form className='formLayout' action="#" style={{display: 'flex', flexDirection: 'column'}}>
-                    <input className='input' type="text" placeholder="username" class="field" />
-                    <input type="password" placeholder="password" class="field" />
-                    <input type="submit" value="login" class="btn" />
-                </form>
-                <div class="pass-link">
-                    <a href="#" >Lost your password?</a>
+            <div className="authRightGrid">
+                <form className='formLayout' action="#" >
+                    <div className='tittle'>Sign in</div>
+                    <div style={{display: 'flex', flexDirection: 'column', height: '30%',width: '100%',justifyContent: 'space-between'}}>
+                        <input className='input' type="text" placeholder="Email address*" />
+                        <input className='input' type="password" placeholder="Password*"  />
+                    </div>
+                    <input className='button' type="submit" value="Sign in" />
+                <div className="footer">
+                    <a className='link' href="/forgotPassword" >Forgot password?</a>
+                    <a className='link' href="#" >Don't have an account? Sign in</a>
                 </div>
+                </form>
             </div>
         </div>
     )

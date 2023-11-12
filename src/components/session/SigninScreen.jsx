@@ -33,112 +33,23 @@ export default function SignPrimary() {
   };
 
   return (
-    <Grid container component="main" className='grid' sx={defaultTheme.card}>
-      <AuthLeftGrid/>
-      <Grid item xs={12} sm={8} md={5} component={Paper} elevation={8} square style={defaultTheme.rightGrid}>
-        <Box sx={{
-          my: 8,
-          mx: 4,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-        }}>
-          <Avatar sx={{ m: 1, bgcolor: colors.black }}>
-            <LockOutlinedIcon />
-          </Avatar>
-          <Typography component="h1" variant="h5" style={{ color: colors.white }}>
-            Sign in
-          </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
-            <TextField
-              error={wrongCredentials}
-              margin="normal"
-              required
-              fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-              autoFocus
-              sx={{
-                "& .MuiInputLabel-root": { color: colors.white },
-                border: "1px solid white",
-                borderRadius: 1
-              }}
-
-            />
-            <TextField
-              error={wrongCredentials}
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-              sx={{
-                "& .MuiInputLabel-root": { color: colors.white },
-                border: "1px solid white",
-                borderRadius: 1
-              }}
-            />
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2, backgroundColor: colors.black }}
-            >
-              Sign In
-            </Button>
-            <Grid container>
-              <Grid item xs>
-                <Link href="/forgotPassword" variant="body2" fontStyle={{ color: colors.white }}>
-                  Forgot password?
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link href="/signup" variant="body2" fontStyle={{ color: colors.white }}>
-                  {"Don't have an account? Sign Up"}
-                </Link>
-              </Grid>
-            </Grid>
-          </Box>
-        </Box>
-      </Grid>
-    </Grid>
+    <div className="container" >
+            <AuthLeftGrid />
+            <div className="authRightGrid">
+                <form className='formLayout' action="#" >
+                    <div className='tittle'>Sign in</div>
+                    <div style={{display: 'flex', flexDirection: 'column', height: '30%',width: '100%',justifyContent: 'space-between'}}>
+                        <input className='input' type="text" placeholder="Email address*" />
+                        <input className='input' type="password" placeholder="Password*"  />
+                    </div>
+                    <input className='button' type="submit" value="Sign in" />
+                <div className="footer">
+                    <a className='link' href="/forgotPassword" >Forgot password?</a>
+                    <a className='link' href="#" >Don't have an account? Sign in</a>
+                </div>
+                </form>
+            </div>
+        </div>
   );
 }
 
-
-const defaultTheme = createTheme({
-  card: {
-    display: 'flex',
-    height: '100vh',
-    width: '100cqw'
-  },
-  leftGrid: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    width: '100cqw',
-    height: '100vh',
-    paddingTop: '10vh',
-    paddingBottom: '10vh',
-    backgroundColor: colors.middle_dark_purple
-  },
-  rightGrid: {
-    display: 'flex',
-    height: '100vh',
-    backgroundColor: colors.darker_purple,
-    paddingTop: '10vh'
-  },
-  back_logo: {
-    display: 'flex',
-    position: 'abosolute',
-    left: 5,
-    bottom: 5,
-    zIndex: -1
-  }
-});
