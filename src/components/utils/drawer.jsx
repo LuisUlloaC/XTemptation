@@ -1,11 +1,10 @@
 import * as React from 'react';
-import { styled, useTheme } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import MuiDrawer from '@mui/material/Drawer';
 import MuiAppBar from '@mui/material/AppBar';
 import List from '@mui/material/List';
 import IconButton from '@mui/material/IconButton';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { mainListItems } from './listItemsDrawer';
 import { Box, Toolbar, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -80,7 +79,6 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 );
 
 export default function MiniDrawer() {
-  const theme = useTheme();
   const toggleDrawer = () => {
     setOpen(!open);
   };
@@ -104,7 +102,6 @@ export default function MiniDrawer() {
           >
             <IconButton
               edge="start"
-              color={colors.white}
               aria-label="open drawer"
               onClick={()=>{
                 toggleDrawer()
@@ -132,7 +129,7 @@ export default function MiniDrawer() {
       <Drawer variant="permanent" open={open} PaperProps={{sx: {backgroundColor: colors.darker_purple}}}>
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+            <ChevronLeftIcon sx={{color: colors.white}}/>
           </IconButton>
         </DrawerHeader>
         <List style={{backgroundColor: colors.darker_purple}}>
