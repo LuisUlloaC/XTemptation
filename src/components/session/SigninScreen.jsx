@@ -45,7 +45,7 @@ export default function SignPrimary() {
                     <input className='button' type="submit" value="Sign in" />
                 <div className="footer">
                     <a className='link' href="/forgotPassword" >Forgot password?</a>
-                    <a className='link' href="#" >Don't have an account? Sign in</a>
+                    <a className='link' href="/signup" >Don't have an account? Sign up</a>
                 </div>
                 </form>
             </div>

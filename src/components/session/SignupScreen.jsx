@@ -35,120 +35,28 @@ export default function SignPrimary() {
   };
 
   return (
-    <Grid container component="main" className='grid' sx={defaultTheme.card}>
-      <AuthLeftGrid/>
-      <Grid item xs={12} sm={8} md={5} component={Paper} elevation={8} square style={defaultTheme.rightGrid}>
-      <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignContent: 'center',
-            alignItems: 'center',
-            width: '90%',
-
-          }}
-        >
-          <Avatar sx={{ m: 1, bgcolor: colors.black }}>
-            <LockOutlinedIcon />
-          </Avatar>
-          <Typography component="h1" variant="h5" sx={{ color: colors.white }}>
-            SignUp
-          </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  autoComplete="given-name"
-                  name="firstName"
-                  required
-                  fullWidth
-                  id="firstName"
-                  label="First Name"
-                  autoFocus
-                  sx={{
-                    "& .MuiInputLabel-root": { color: colors.white },
-                    border: "1px solid white",
-                    borderRadius: 1
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="lastName"
-                  autoComplete="family-name"
-                  sx={{
-                    "& .MuiInputLabel-root": { color: colors.white },
-                    border: "1px solid white",
-                    borderRadius: 1
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  id="email"
-                  label="Email Address"
-                  name="email"
-                  autoComplete="email"
-                  sx={{
-                    "& .MuiInputLabel-root": { color: colors.white },
-                    border: "1px solid white",
-                    borderRadius: 1
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  name="password"
-                  label="Password"
-                  type="password"
-                  id="password"
-                  autoComplete="new-password"
-                  sx={{
-                    "& .MuiInputLabel-root": { color: colors.white },
-                    border: "1px solid white",
-                    borderRadius: 1
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <FormControlLabel
-                  control={<Checkbox value="allowExtraEmails" color="primary" sx={{ color: colors.white }} />}
-                  label={
-                    <Typography variant="body1" sx={{ color: colors.white }}>
-                      I want to receive marketing promotions and updates via email.
-                    </Typography>
-                  }
-                />
-              </Grid>
-            </Grid>
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2, backgroundColor: colors.black }}
-            >
-              Sign Up
-            </Button>
-            <Grid container justifyContent="flex-end">
-              <Grid item>
-                <Link href="/signin" variant="body2" fontStyle={{ color: colors.white }}>
-                  Already have an account? Sign in
-                </Link>
-              </Grid>
-            </Grid>
-          </Box>
-        </Box>
-      </Grid>
-    </Grid>
+    <div className="container" >
+            <AuthLeftGrid />
+            <div className="authRightGrid">
+                <form className='formLayout' style={{height: '70%'}} action="#" >
+                    <div className='tittle'>Sign up</div>
+                    <div style={{display: 'flex', flexDirection: 'row', height: '12%',width: '100%',justifyContent: 'space-between'}}>
+                        <input className='input'style={{width: '45%', height: '100%'}} type="text" placeholder="First Name*" />
+                        <input className='input' style={{width: '45%', height: '100%'}} type="text" placeholder="Last Name*"  />
+                    </div>
+                    <div style={{display: 'flex', flexDirection: 'column', height: '40%',width: '100%',justifyContent: 'space-between'}}>
+                        <input className='input' style={{height: '40%'}} type="text" placeholder="Email address*" />
+                        <input className='input' style={{height: '40%'}} type="password" placeholder="Password*"  />
+                        <input className='input' style={{height: '40%'}} type="password" placeholder="Repeat password*"  />
+                    </div>
+                    <input className='button' type="submit" value="Sign up" />
+                <div className="footer">
+                    <a className='link' href="/forgotPassword" >Forgot password?</a>
+                    <a className='link' href="/signin" >Already have an account? Sign in</a>
+                </div>
+                </form>
+            </div>
+        </div>
   );
 }
 

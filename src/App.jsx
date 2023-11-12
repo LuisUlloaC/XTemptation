@@ -13,6 +13,7 @@ function App() {
         <Router >
           <Routes >
               <Route path="/" element={<SignInSide/>}/>
+              <Route path="/signin" element={<SignInSide/>}/>
               <Route path="/test" element={<LoginForm/>}/>
 
               <Route path="/home" element={<HomeScreen/>}/>
