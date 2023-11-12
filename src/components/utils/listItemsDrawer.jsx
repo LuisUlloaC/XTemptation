@@ -9,50 +9,51 @@ import PermMediaOutlinedIcon from '@mui/icons-material/PermMediaOutlined';
 import AddCardOutlinedIcon from '@mui/icons-material/AddCardOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';
+import colors from '../../colors';
 
 export const mainListItems = (
   <React.Fragment>
     <ListItemButton>
       <ListItemIcon>
-        <HomeOutlinedIcon />
+        <HomeOutlinedIcon sx={{ color: colors.white }}/>
       </ListItemIcon>
-      <ListItemText primary="Home" />
+      <ListItemText primary="Home" sx={{ color: colors.white }}/>
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
-        <NotificationsOutlinedIcon />
+        <NotificationsOutlinedIcon sx={{ color: colors.white }}/>
       </ListItemIcon>
-      <ListItemText primary="Notifications" />
+      <ListItemText primary="Notifications" sx={{ color: colors.white }}/>
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
-        <ChatBubbleOutlineOutlinedIcon />
+        <ChatBubbleOutlineOutlinedIcon sx={{ color: colors.white }}/>
       </ListItemIcon>
-      <ListItemText primary="Messages" />
+      <ListItemText primary="Messages" sx={{ color: colors.white }}/>
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
-        <PermMediaOutlinedIcon />
+        <PermMediaOutlinedIcon sx={{ color: colors.white }}/>
       </ListItemIcon>
-      <ListItemText primary="Collections" />
+      <ListItemText primary="Collections" sx={{ color: colors.white }}/>
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
-        <AddCardOutlinedIcon />
+        <AddCardOutlinedIcon sx={{ color: colors.white }}/>
       </ListItemIcon>
-      <ListItemText primary="Add card" />
+      <ListItemText primary="Add card" sx={{ color: colors.white }}/>
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
-        <AccountCircleOutlinedIcon />
+        <AccountCircleOutlinedIcon sx={{ color: colors.white }}/>
       </ListItemIcon>
-      <ListItemText primary="Profile" />
+      <ListItemText primary="Profile" sx={{ color: colors.white }}/>
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
-        <MoreHorizOutlinedIcon />
+        <MoreHorizOutlinedIcon sx={{ color: colors.white }}/>
       </ListItemIcon>
-      <ListItemText primary="More" />
+      <ListItemText primary="More" sx={{ color: colors.white }}/>
     </ListItemButton>
   </React.Fragment>
 );

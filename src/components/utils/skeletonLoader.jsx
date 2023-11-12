@@ -14,7 +14,7 @@ function Media(props) {
   const { loading = false } = props;
 
   return (
-    <Card sx={{ width: '70%', height: '50%',  m: 2, marginLeft: '3%'  }}>
+    <Card sx={{ width: '90%', height: '50%',  m: 2, marginLeft: '5%'  }}>
       <CardHeader
         avatar={
           loading ? (
