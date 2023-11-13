@@ -36,7 +36,7 @@ export default function SignPrimary() {
     <div className="container" >
             <AuthLeftGrid />
             <div className="authRightGrid">
-                <form className='formLayout' action="#" >
+                <form className='formLayout' action="/home" >
                     <div className='tittle'>Sign in</div>
                     <div style={{display: 'flex', flexDirection: 'column', height: '30%',width: '100%',justifyContent: 'space-between'}}>
                         <input className='input' type="text" placeholder="Email address*" />

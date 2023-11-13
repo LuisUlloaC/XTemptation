@@ -37,6 +37,64 @@ body {
   background-color: var(--middle_dark_purple);
 }
 
+
+@media (min-width:100px) and (max-width: 768px) {
+  .authLeftGrid {
+    display: none;
+  }
+  
+  .authRightGrid {
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+   }
+   
+   .authRightGrid::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    filter: blur(3px);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./assets/blanco.svg');
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    opacity: 0.5; 
+   }
+
+  .formLayout {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-height: 40%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .formLayout .input {
+    display: flex;
+    max-height: 30%;
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 6px;
+    font-size: 100%;
+    color: var(--white);
+    background-color: transparent;
+  }
+  
+  .formLayout .tittle {
+    display: flex;
+    font-size: 50vw;
+    color: var(--white);
+  }
+
+ }
+ 
+
 .authRightGrid {
   display: flex;
   flex-direction: column;

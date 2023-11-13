@@ -1,19 +1,15 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
-import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Skeleton from '@mui/material/Skeleton';
 import colors from '../../colors';
 
 
 export default function StorieCard({loading}) {
   return (
-    <Card className='article-card' sx={{m: 2, backgroundColor: colors.feed_darker_purple }}>
+    <Card className='article-card' sx={{display: 'flex',width: '25vw',  m: 2, backgroundColor: colors.feed_darker_purple }}>
       {loading ? (
         <Skeleton sx={{ height: 190 }} animation="wave" variant="rectangular" />
       ) : (

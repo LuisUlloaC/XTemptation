@@ -35,13 +35,14 @@ export default function HomeScreen() {
           <Container  sx={{ display: 'flex', width: '100cqw' }}>
             <Grid container spacing={10} sx={{ display: 'flex', maxWidth: '100vw' }}>
               <List sx={{display: 'flex',
-                        width: '100vw', 
+                        width: '100%',
+                        marginLeft: '15vw', 
                         overflowX: 'scroll',
                         '&::-webkit-scrollbar': {
                           display: 'none',
                         },
                         scrollbarWidth: 'none', }}>
-                {[1, 2, 3,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5].map((value) => (
+                {[1, 2].map((value) => (
                   <ListItem
                     key={value}
                     disableGutters
@@ -51,12 +52,12 @@ export default function HomeScreen() {
                   </ListItem>
                 ))}
               </List>
-              <List sx={{ width: '100%' }}>
-                {[1, 2, 3].map((value) => (
+              <List sx={{width: '100%' }}>
+                {[3, 4, 5].map((value) => (
                   <ListItem
                     key={value}
                     disableGutters={true}
-                    sx={{ width: '100%' }}
+                    sx={{display: 'flex', width: '100%' }}
                   >
                     <FeedCard loading={loading} />
                   </ListItem>
