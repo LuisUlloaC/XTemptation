@@ -59,37 +59,3 @@ export default function SignPrimary() {
         </div>
   );
 }
-
-
-const defaultTheme = createTheme({
-  card: {
-    display: 'flex',
-    height: '100vh',
-    width: '100cqw'
-  },
-  leftGrid: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    width: '100cqw',
-    height: '100vh',
-    paddingTop: '10vh',
-    paddingBottom: '10vh',
-    backgroundColor: colors.middle_dark_purple
-  },
-  rightGrid: {
-    display: 'flex',
-    height: '100vh',
-    backgroundColor: colors.darker_purple,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  back_logo: {
-    display: 'flex',
-    position: 'abosolute',
-    left: 5,
-    bottom: 5,
-    zIndex: -1
-  }
-});
