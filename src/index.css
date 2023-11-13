@@ -3,6 +3,16 @@ body {
   max-width: 100cqw;
 }
 
+@font-face {
+  font-family: 'Amperzand';
+  src: local('Amperzand'), url(./assets/Amperzand.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'PoetsenOne';
+  src: local('PoetsenOne'), url(./assets/PoetsenOne.ttf) format('truetype');
+}
+
 :root {
   --light_purple: #b21db0;
     --dark_purple: #940b92;
@@ -14,8 +24,68 @@ body {
     --bone_white: #fae3ff;
     --white: #ffffff;
     --gray: #3b323d;
- }
+  }
+  
+  @media (min-width:100px) and (max-width: 768px) {
+    .authLeftGrid {
+      display: none;
+    }
+    
+    .authRightGrid {
+      position: absolute;
+      z-index: 1;
+      width: 100vw;
+      height: 100vh;
+     }
+     
+     .authRightGrid::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      filter: blur(3px);
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url('./assets/blanco.svg');
+      background-position: left bottom;
+      background-repeat: no-repeat;
+      background-size: 150%;
+      opacity: 0.5; 
+     }
+  
+    .formLayout {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      max-height: 40%;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  
+    .formLayout .input {
+      display: flex;
+      max-height: 30%;
+      width: 100%;
+      margin-top: 5px;
+      border-radius: 6px;
+      font-size: 100%;
+      color: var(--white);
+      background-color: transparent;
+    }
+    
+    .formLayout .tittle {
+      display: flex;
+      font-size: 50vw;
+      color: var(--white);
+    }
 
+    .drawer {
+      flex-direction: row;
+    }
+  
+   }
+   
 .container {
   display: flex;
   flex-direction: row;
@@ -23,6 +93,12 @@ body {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: hidden;
+}
+
+.logoFont {
+  font-family: Amperzand;
+  color: var(--black);
+  font-size: 5vw;
 }
 
 .authLeftGrid {
@@ -34,66 +110,10 @@ body {
   height: 100vh;
   padding-top: 10vh;
   padding-bottom: 10vh;
-  background-color: var(--middle_dark_purple);
+  background-color: var(--white);
 }
 
 
-@media (min-width:100px) and (max-width: 768px) {
-  .authLeftGrid {
-    display: none;
-  }
-  
-  .authRightGrid {
-    position: absolute;
-    z-index: 1;
-    width: 100vw;
-    height: 100vh;
-   }
-   
-   .authRightGrid::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    filter: blur(3px);
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('./assets/blanco.svg');
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    background-size: 150%;
-    opacity: 0.5; 
-   }
-
-  .formLayout {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    max-height: 40%;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  .formLayout .input {
-    display: flex;
-    max-height: 30%;
-    width: 100%;
-    margin-top: 5px;
-    border-radius: 6px;
-    font-size: 100%;
-    color: var(--white);
-    background-color: transparent;
-  }
-  
-  .formLayout .tittle {
-    display: flex;
-    font-size: 50vw;
-    color: var(--white);
-  }
-
- }
- 
 
 .authRightGrid {
   display: flex;
@@ -103,7 +123,7 @@ body {
   align-items: center;
   min-width: 20vw;
   height: 100vh;
-  background-color: var(--darker_purple);
+  background-color: var(--dark_purple);
 }
 
 .formLayout {
@@ -123,14 +143,18 @@ body {
 
 .formLayout .input {
   display: flex;
-  height: 35%;
+  height: 15%;
   width: 100%;
   margin-top: 5px;
-  border-radius: 6px;
   font-size: 100%;
+  outline: none;
+  border: none;
   color: var(--white);
-  background-color: var(--background_darker_purple);
+  background-color: transparent;
+  border-bottom: 1px solid var(--middle_dark_purple);
+  
 }
+
 
 .formLayout .button {
   display: flex;
@@ -156,6 +180,17 @@ body {
   display: flex;
   color: var(--white);
 }
+
+
+.drawer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 13vw;
+  background-color: var(--dark_purple);
+}
+
+
 
 .article-card {
   width: 15cqw;

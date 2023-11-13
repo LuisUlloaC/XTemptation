@@ -1,5 +1,6 @@
 import * as React from "react"
 const LogoColor = ({className, width, height, primaryColor, secondaryColor, middleColor}) => (
+  <>
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
@@ -30,6 +31,7 @@ const LogoColor = ({className, width, height, primaryColor, secondaryColor, midd
         d="M14.51 1.508c3.413-2.731 8.25-1.138 10.241 0 4.78 2.731 2.56 9.104.854 11.949-4.097-2.048-6.828-1.992-7.682-1.707-1.365 0-5.69 1.707-7.681 2.56 0 1.366 5.974.398 9.388 1.053 2.56 1.052 4.53 2.361 6.828 2.361 2.731 4.097.57 9.673-.853 11.95.284 0-.17.17-4.268.853-4.096.683-7.966-1.423-9.388-2.56C8.819 25.12 2.219 19.09.853 17.723c-1.365-1.365-.569-3.413 0-4.267 3.13-2.845 10.242-9.218 13.656-11.949z"
       />
     </g>
-  </svg>
+    </svg>
+  </>
 )
 export default LogoColor
