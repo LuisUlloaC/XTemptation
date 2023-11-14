@@ -32,25 +32,53 @@ export default function MiniDrawer() {
     <div className='drawer'>
       <ul className='list'>
         <li className='item' href='/signin'>
-          <HomeOutlinedIcon sx={{ color: colors.white }} />
+          <ListItemButton>
+            <ListItemIcon>
+              <HomeOutlinedIcon sx={{ color: colors.white }} />
+            </ListItemIcon>
+          </ListItemButton>
         </li>
         <li className='item'>
-          <NotificationsOutlinedIcon sx={{ color: colors.white }} />
+          <ListItemButton>
+            <ListItemIcon>
+              <NotificationsOutlinedIcon sx={{ color: colors.white }} />
+            </ListItemIcon>
+          </ListItemButton>
         </li>
         <li className='item'>
-          <ChatBubbleOutlineOutlinedIcon sx={{ color: colors.white }} />
+          <ListItemButton>
+            <ListItemIcon>
+              <ChatBubbleOutlineOutlinedIcon sx={{ color: colors.white }} />
+            </ListItemIcon>
+          </ListItemButton>
         </li>
         <li className='item'>
-          <PermMediaOutlinedIcon sx={{ color: colors.white }} />
+          <ListItemButton>
+            <ListItemIcon>
+              <PermMediaOutlinedIcon sx={{ color: colors.white }} />
+            </ListItemIcon>
+          </ListItemButton>
         </li>
         <li className='item'>
-          <AddCardOutlinedIcon sx={{ color: colors.white }} />
+          <ListItemButton>
+            <ListItemIcon>
+              <AddCardOutlinedIcon sx={{ color: colors.white }} />
+            </ListItemIcon>
+          </ListItemButton>
         </li>
         <li className='item'>
-          <AccountCircleOutlinedIcon sx={{ color: colors.white }} />
+          <ListItemButton>
+            <ListItemIcon>
+              <AccountCircleOutlinedIcon sx={{ color: colors.white }} />
+            </ListItemIcon>
+          </ListItemButton>
         </li>
         <li className='item'>
-          <MoreHorizOutlinedIcon sx={{ color: colors.white }} />
+          <ListItemButton>
+            <ListItemIcon>
+              <MoreHorizOutlinedIcon sx={{ color: colors.white }} />
+            </ListItemIcon>
+          </ListItemButton>
         </li>
       </ul>
     </div>

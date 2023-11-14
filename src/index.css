@@ -15,95 +15,18 @@ body {
 
 :root {
   --light_purple: #b21db0;
-    --dark_purple: #940b92;
-    --middle_dark_purple: #580957;
-    --darker_purple: #352f44;
-    --background_darker_purple: #463f57;
-    --feed_darker_purple: #6c6285;
-    --black: #383838;
-    --bone_white: #fae3ff;
-    --white: #ffffff;
-    --gray: #3b323d;
-  }
-  
-  @media (min-width:100px) and (max-width: 768px) {
-    .authLeftGrid {
-      display: none;
-    }
-    
-    .authRightGrid {
-      position: absolute;
-      z-index: 1;
-      width: 100vw;
-      height: 100vh;
-     }
-     
-     .authRightGrid::before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      filter: blur(3px);
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-image: url('./assets/blanco.svg');
-      background-position: left bottom;
-      background-repeat: no-repeat;
-      background-size: 150%;
-      opacity: 0.5; 
-     }
-  
-    .formLayout {
-      display: flex;
-      flex-direction: column;
-      width: 80%;
-      max-height: 40%;
-      justify-content: space-evenly;
-      align-items: center;
-    }
-  
-    .formLayout .input {
-      display: flex;
-      max-height: 30%;
-      width: 100%;
-      margin-top: 5px;
-      border-radius: 6px;
-      font-size: 100%;
-      color: var(--white);
-      background-color: transparent;
-    }
-    
-    .formLayout .tittle {
-      display: flex;
-      font-size: 50vw;
-      color: var(--white);
-    }
+  --dark_purple: #940b92;
+  --middle_dark_purple: #580957;
+  --darker_purple: #352f44;
+  --background_darker_purple: #463f57;
+  --feed_darker_purple: #6c6285;
+  --black: #383838;
+  --bone_white: #fae3ff;
+  --white: #ffffff;
+  --gray: #3b323d;
+}
 
-    .drawer {
-      display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  position: absolute;
-  height: 20vh;
-  min-width: 100vw;
-  background-color: var(--dark_purple);
-    }
-    
-    .drawer .list {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      list-style-type: none;
-      margin: 0;
-      padding: 10px;
-      width: 100%;
-      height: 45%;
-    }
-  
-   }
-   
+
 .container {
   display: flex;
   flex-direction: row;
@@ -130,8 +53,6 @@ body {
   padding-bottom: 10vh;
   background-color: var(--white);
 }
-
-
 
 .authRightGrid {
   display: flex;
@@ -170,9 +91,8 @@ body {
   color: var(--white);
   background-color: transparent;
   border-bottom: 1px solid var(--middle_dark_purple);
-  
-}
 
+}
 
 .formLayout .button {
   display: flex;
@@ -199,12 +119,20 @@ body {
   color: var(--white);
 }
 
+.homeContainer {
+  display: flex;
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-y: hidden;
+  background-color: var(--white);
+}
 
 .drawer {
   display: flex;
-  position: absolute;
   height: 100vh;
-  max-width: 20vw;
+  max-width: 5vw;
   background-color: var(--dark_purple);
 }
 
@@ -214,7 +142,7 @@ body {
   justify-content: space-between;
   list-style-type: none;
   margin: 0;
-  padding: 10px;
+  padding: 2px;
   width: 100%;
   height: 45%;
 }
@@ -275,4 +203,82 @@ body {
 .article-card .title {
   font-size: 17px;
   color: #fff;
+}
+
+
+@media screen and (max-width: 768px) {
+  .authLeftGrid {
+    display: none;
+  }
+
+  .authRightGrid {
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .authRightGrid::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    filter: blur(3px);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./assets/blanco.svg');
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    opacity: 0.5;
+  }
+
+  .formLayout {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-height: 40%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .formLayout .input {
+    display: flex;
+    max-height: 30%;
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 6px;
+    font-size: 100%;
+    color: var(--white);
+    background-color: transparent;
+  }
+
+  .formLayout .tittle {
+    display: flex;
+    font-size: 50vw;
+    color: var(--white);
+  }
+
+  .drawer {
+    display: flex;
+    position: fixed;
+    overflow-x: scroll;
+    bottom: 0;
+    justify-content: center;
+    align-items: flex-start;
+    max-height: 5vh;
+    min-width: 100vw;
+    background-color: var(--dark_purple);
+  }
+
+  .drawer .list {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    list-style-type: none;
+    max-height: 10%;
+  }
+
 }
