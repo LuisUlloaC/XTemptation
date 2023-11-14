@@ -37,7 +37,8 @@ export default function SignPrimary() {
             <AuthLeftGrid />
             <div className="authRightGrid">
                 <form className='formLayout' action="/home" >
-                    <div className='tittle'>Sign in</div>
+                    <div className='tittle'>
+                      <span>Sign in</span></div>
                     <div style={{display: 'flex', flexDirection: 'column', height: '30%',width: '100%',justifyContent: 'space-between'}}>
                         <input className='input' type="text" placeholder="Email address*" />
                         <input className='input' type="password" placeholder="Password*"  />

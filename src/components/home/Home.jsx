@@ -15,7 +15,16 @@ export default function HomeScreen() {
       <div className='switchScreen'>
       </div>
       <div className='stories-layout'>
-        <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
       </div>
     </div>
   );

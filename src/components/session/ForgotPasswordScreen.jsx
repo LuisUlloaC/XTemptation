@@ -29,8 +29,8 @@ export default function SignPrimary() {
             <AuthLeftGrid />
             <div className="authRightGrid">
                 <form className='formLayout' action="#" >
-                    <div className='tittle'>Insert email to send restart code</div>
-                    <div style={{display: 'flex', flexDirection: 'column', height: '40%',width: '100%',justifyContent: 'space-between'}}>
+                    <div className='tittle'><span>Insert email to send restart code</span></div>
+                    <div className='inputBox'>
                         <input className='input' type="text" placeholder="Email address*" />
                     </div>
                     <input className='button' type="submit" value="Send code" />

@@ -1,10 +1,4 @@
 import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import Skeleton from '@mui/material/Skeleton';
-import colors from '../../colors';
 
 
 export default function StorieCard({loading}) {
@@ -12,7 +6,6 @@ export default function StorieCard({loading}) {
     return (
       <div className="storie">
         <div className="card-image">
-          <div className="title pulsate"></div>
           <div className="storie-content">
             <div className="content-title pulsate" />
             <div className="content-subtitle pulsate" />
