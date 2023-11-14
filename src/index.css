@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  max-width: 100cqw;
+  max-width: 100vw;
 }
 
 @font-face {
@@ -24,8 +24,19 @@ body {
   --bone_white: #fae3ff;
   --white: #ffffff;
   --gray: #3b323d;
+  --light_gray: #efefef;
 }
 
+
+.pulsate{
+  border-radius: 8px;
+  background: linear-gradient(-45deg, var(--gray), var(--white), var(--gray), var(--white));
+  opacity: 0.5;
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 2.25s ease infinite;
+	-moz-animation: Gradient 2.25s ease infinite;
+	animation: Gradient 2.25s ease infinite;
+}
 
 .container {
   display: flex;
@@ -133,11 +144,11 @@ body {
   flex-direction: column;
   height: 100%;
   max-height: 100%;
-  width: 100%;
+  width: 75%;
   max-width: 100%;
   overflow-y: hidden;
   overflow-x: hidden;
-  background-color: var(--black);
+  background-color: var(--light_gray);
 }
 
 .drawer {
@@ -167,63 +178,88 @@ body {
   margin-left: 1%;
 }
 
-.pulsate{
-  background: linear-gradient(-45deg, var(--bone_white), var(--white), var(--bone_white), var(--white));
-	background-size: 400% 400%;
-	-webkit-animation: Gradient 2.25s ease infinite;
-	-moz-animation: Gradient 2.25s ease infinite;
-	animation: Gradient 2.25s ease infinite;
-}
-
-.block {
-  display:flex;
-  width:60%;
-  height:10%;
-  color: black;
-}
-
-.block2 {
-  display: flex;
-  width:78px;
-  height:8px;
-  margin-bottom:8px;
-}
-.block3 {
-  display: flex;
-  width:131px;
-  height:8px;
-  margin-bottom:16px;
-}
-.circle {
-  display: flex;
-  width:28px;
-  height:28px;
-  border-radius:50%;
-  float:right;
-  
-}
-.card {
+.stories-layout {
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
-	width: 335px;
-  background: #fff;
+  flex-grow: 1;
+  background-color: var(--light_gray);
+  box-shadow: -4px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.storie .title {
+  display:flex;
+  position: absolute;
+  top: 10;
+  width:60%;
+  height:5%;
+}
+
+.storie-content .content-title {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  bottom: 0;
+  width:50%;
+  height:15%;
+  margin-bottom:0.5%;
+}
+
+.storie-content .content-subtitle {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  bottom: 0;
+  width:30%;
+  height:15%;
+  margin-bottom:0.7%;
+}
+
+.storie-content .circle {
+  display: flex;
+  position: relative;
+  width:8%;
+  height:100%;
+  border-radius:50%;
+  float:right;
+}
+
+.storie-content .footer {
+  display: flex;
+  position: relative;
+  height: 5vh;
+  direction: rtl;
+}
+
+.storie {
+  display: flex;
+  position: relative;
+  z-index: 0;
+  flex-direction: column;
+  border-radius: 8px;
+	width: 95%;
+  height: 30vh;
+  background: var(--white);
 	position: relative;
 	margin:auto;
 }
-.card-image {
+
+.storie .card-image {
   display:flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 0;
   max-width:100%;
-  height:243px;
-  background:var(--bone_white);
-  padding:16px;
+  height:100%;
+  padding:0.5%;
+  border-radius: 8px;
 }
-.card-content {
+.storie-content {
   display: flex;
   flex-direction: column;
-  clear:both;
-  padding:16px;
-  background:var(--bone_white);
+  position: relative;
+  margin-top: auto;
+  z-index: 1;
+  max-height: 40%;
 }
 
 @-webkit-keyframes Gradient {
