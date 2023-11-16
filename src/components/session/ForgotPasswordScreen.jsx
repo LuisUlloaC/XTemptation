@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { createTheme } from '@mui/material/styles';
-import colors from '../../colors';
 import { useNavigate } from 'react-router-dom';
 import { Context } from '../context/provider';
 import AuthLeftGrid from '../utils/authLetfGrid';
+import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 
 
 
@@ -29,9 +28,13 @@ export default function SignPrimary() {
             <AuthLeftGrid />
             <div className="authRightGrid">
                 <form className='formLayout' action="#" >
-                    <div className='tittle'><span>Insert email to send restart code</span></div>
+                    <div className='title'><span>Insert email to send restart code</span></div>
                     <div className='inputBox'>
+                      <div className='input-container'>
+                      <MailOutlineOutlinedIcon className='icon-class-name'/>
                         <input className='input' type="text" placeholder="Email address*" />
+
+                      </div>
                     </div>
                     <input className='button' type="submit" value="Send code" />
                 <div className="footer">

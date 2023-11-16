@@ -1,5 +1,4 @@
 import * as React from 'react';
-import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
@@ -14,18 +13,6 @@ import colors from '../../colors';
 
 
 export default function MiniDrawer() {
-  const toggleDrawer = () => {
-    setOpen(!open);
-  };
-  const [open, setOpen] = React.useState(false);
-
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
 
   return (
     <div className='drawer'>

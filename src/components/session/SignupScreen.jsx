@@ -2,6 +2,11 @@ import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Context } from '../context/provider';
 import AuthLeftGrid from '../utils/authLetfGrid';
+import FaceboockLogin from '../../assets/facebook';
+import GoogleLogin from '../../assets/google';
+import AppleLogin from '../../assets/apple';
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 
 
 export default function SignPrimary() {
@@ -25,21 +30,35 @@ export default function SignPrimary() {
     <div className="container" >
             <AuthLeftGrid />
             <div className="authRightGrid">
-                <form className='formLayout' style={{height: '70%'}} action="#" >
-                    <div className='tittle'>Sign up</div>
-                    <div style={{display: 'flex', flexDirection: 'row', height: '12%',width: '100%',justifyContent: 'space-between'}}>
-                        <input className='input'style={{width: '45%', height: '50%'}} type="text" placeholder="First Name*" />
-                        <input className='input' style={{width: '45%', height: '50%'}} type="text" placeholder="Last Name*"  />
+                <form className='formLayout' action="#" >
+                    <div className='title'>Sign up</div>
+                    <div className='inputBox' >
+                    <div className='input-container' style={{height: '40%',width: '100%',justifyContent: 'space-between'}}>
+                        <input className='input'style={{width: '40%', height: '50%', marginBottom: '2%'}} type="text" placeholder="First Name*" />
+                        <input className='input' style={{width: '40%', height: '50%', marginBottom: '2%'}} type="text" placeholder="Last Name*"  />
                     </div>
-                    <div style={{display: 'flex', flexDirection: 'column', height: '40%',width: '100%',justifyContent: 'space-between'}}>
-                        <input className='input'  type="text" placeholder="Email address*" />
-                        <input className='input'  type="password" placeholder="Password*"  />
-                        <input className='input'  type="password" placeholder="Repeat password*"  />
+                    <div className='input-container'  style={{height: '40%',width: '100%'}}>
+                    <MailOutlineOutlinedIcon className='icon-class-name'/>
+                        <input className='input' style={{width: '93%',height: '50%', marginBottom: '2%'}} type="text" placeholder="Email address*" />
+                    </div>
+                    <div className='input-container' style={{height: '40%',width: '100%'}}>
+                    <LockOutlinedIcon className='icon-class-name'/>
+                        <input className='input' style={{width: '93%', height: '50%', marginBottom: '2%'}} type="password" placeholder="Password*"  />
+                    </div>
+                    <div className='input-container' style={{height: '40%',width: '100%'}}>
+                    <LockOutlinedIcon className='icon-class-name'/>
+                        <input className='input' style={{width: '93%', height: '50%', marginBottom: '2%'}} type="password" placeholder="Repeat password*"  />
+                    </div>
                     </div>
                     <input className='button' type="submit" value="Sign up" />
-                <div className="footer">
-                    <a className='link' href="/forgotPassword" >Forgot password?</a>
-                    <a className='link' href="/signin" >Already have an account? Sign in</a>
+                <div className="footer" >
+                    <a className='link' href="/forgotPassword" >Esqueceu sua senha</a>
+                    <a className='link' href="/signin" >já tem uma conta? Entrar</a>
+                    <div className='banners'>
+                      <FaceboockLogin/>
+                      <GoogleLogin/>
+                      <AppleLogin/>
+                    </div>
                 </div>
                 </form>
             </div>
