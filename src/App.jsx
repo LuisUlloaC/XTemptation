@@ -12,10 +12,9 @@ function App() {
       <CustomProvider  >
         <Router >
           <Routes >
-              <Route path="/" element={<SignInSide/>}/>
+              <Route path="/" element={<HomeScreen/>}/>
               <Route path="/signin" element={<SignInSide/>}/>
               <Route path="/test" element={<LoginForm/>}/>
-
               <Route path="/home" element={<HomeScreen/>}/>
               <Route path="/signup" element={<SignUp/>}/>
               <Route path="/forgotPassword" element={<ForgotPassword/>}/>

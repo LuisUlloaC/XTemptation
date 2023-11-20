@@ -27,10 +27,10 @@ export default function SignPrimary() {
     <div className="container" >
             <AuthLeftGrid />
             <div className="authRightGrid">
-                <form className='formLayout' action="#" >
+                <form className='formLayout' action="#" style={{maxHeight: '30%', minHeight: '30%'}}>
                     <div className='title'><span>Insert email to send restart code</span></div>
                     <div className='inputBox'>
-                      <div className='input-container'>
+                      <div className='input-container' style={{height: '40%'}}>
                       <MailOutlineOutlinedIcon className='icon-class-name'/>
                         <input className='input' type="text" placeholder="Email address*" />
 
