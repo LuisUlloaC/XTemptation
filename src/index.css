@@ -59,17 +59,15 @@ body {
 
 .stories-layout {
   display: flex;
-  position: relative;
-  width: 30vw;
-  z-index: 0;
+  width: 20%;
+  height: 85%;
+  right: 0;
+  bottom: 0;
   flex-direction: column;
   justify-content: flex-start;
   align-content: start;
   align-items: center;
-  padding-bottom: 2vh;
-  flex-grow: 1;
   background-color: var(--light_gray);
-  box-shadow: -4px 0px 4px rgba(0, 0, 0, 0.25);
   overflow-y: scroll;
 }
 

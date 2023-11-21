@@ -6,6 +6,7 @@ import { Context } from '../context/provider';
 import { useNavigate } from "react-router-dom";
 
 import { getPublications } from '../../actions/pubs';
+import NavBar from '../utils/navBar';
 
 
 export default function HomeScreen() {
@@ -17,10 +18,10 @@ export default function HomeScreen() {
   const [publications, setPublications] = React.useState(false);
 
   React.useEffect(() => {
-    if (!state.access) {
+    /*if (!state.access) {
       navigate("/signin")
     }
-
+*/
     (async () => {
       let data = await getPublications(api);
       if (data.sucess) {
@@ -33,6 +34,7 @@ export default function HomeScreen() {
 
   return (
     <div className='homeContainer'>
+      <NavBar/>
       <MiniDrawer />
       <div className='switchScreen'>
         {loading
@@ -54,6 +56,40 @@ export default function HomeScreen() {
         
       </div>
       <div className='stories-layout'>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
+          <StorieCard loading={true}/>
           <StorieCard loading={true}/>
           <StorieCard loading={true}/>
           <StorieCard loading={true}/>
