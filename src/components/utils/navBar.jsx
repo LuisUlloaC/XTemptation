@@ -1,8 +1,12 @@
 import * as React from 'react';
-import HomeIcon from '../../assets/homeIcon';
-import BellIcon from '../../assets/bellIcon';
 import ChatIcon from '../../assets/chatIcon';
-import FolderIcon from '../../assets/folderIcon';
+import FeedIcon from '../../assets/feedIcon';
+import UserIcon from '../../assets/userIcon';
+import StreamIcon from '../../assets/streamIcon';
+import CameraIcon from '../../assets/cameraIcon';
+import NavbarBellIcon from '../../assets/navBarBellIcon';
+import UserBadgeIcon from '../../assets/userBadge';
+import MessageNavBarIcon from '../../assets/messageNavBarIcon';
 
 
 
@@ -10,26 +14,38 @@ export default function NavBar() {
 
   return (
       <div style={{
-          display: 'flex', position: 'fixed', top: '0', width: '50vw',
-          borderBottomLeftRadius: '8px', borderBottomRightRadius: '8px', backgroundColor: 'aqua',
-          alignItems: 'center', justifyContent: 'center'
+          display: 'flex', position: 'absolute', top: '0',left: '15%',width: '85vw',
+          borderBottomLeftRadius: '8px', borderBottomRightRadius: '8px', backgroundColor: '#fff',
+          alignItems: 'center', border: '1px solid #580957',  boxShadow: '0px 10px 10px rgba(0, 0, 0, 0.1)'
       }}>
           <div style={{
-              display: 'flex', minWidth: '40vw', flexDirection: 'row',
-              backgroundColor: 'aquamarine', alignItems: 'center', justifyContent: 'center'
+              display: 'flex', minWidth: '80%', flexDirection: 'row',
+               alignItems: 'center', justifyContent: 'space-evenly', backgroundColor: '#fff', borderRight: '1px solid #580957', 
           }}>
         <div>
-          <HomeIcon/>
+          <FeedIcon />
         </div>
         <div>
-          <BellIcon/>
+          <CameraIcon/>
         </div>
         <div>
-          <ChatIcon/>
+          <StreamIcon/>
         </div>
         <div>
-          <FolderIcon/>
+          <UserIcon/>
         </div>
+      </div>
+      <div style={{display: 'flex', width: '100%',justifyContent: 'space-evenly'}}>
+
+      <div>
+      <NavbarBellIcon/>
+      </div>
+      <div>
+      <MessageNavBarIcon/>
+      </div>
+      <div>
+      <UserBadgeIcon/>
+      </div>
       </div>
     </div>
   );

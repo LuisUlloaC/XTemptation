@@ -139,16 +139,32 @@
     justify-content: center;
     align-items: center;
     overflow-y: hidden;
+    background-color: var(--light_gray);
 }
 
 .homeContainer .switchScreen {
     display: flex;
-    flex-grow: 2;
     bottom: 0;
+    flex-grow: 2;
     flex-direction: column;
-    width: 30%;
-    height: 85%;
-    overflow-y: hidden;
+    width: 40%;
+    max-height: 89%;
+    overflow-y: scroll;
     overflow-x: hidden;
     background-color: var(--light_gray);
-}
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 7%;
+
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+ 
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+ }
+
+

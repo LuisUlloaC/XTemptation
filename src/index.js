@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import './auth.css';
 import './drawer.css';
+import './feed.css'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

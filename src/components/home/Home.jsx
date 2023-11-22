@@ -18,10 +18,10 @@ export default function HomeScreen() {
   const [publications, setPublications] = React.useState(false);
 
   React.useEffect(() => {
-    /*if (!state.access) {
+    if (!state.access) {
       navigate("/signin")
     }
-*/
+
     (async () => {
       let data = await getPublications(api);
       if (data.sucess) {
@@ -34,13 +34,12 @@ export default function HomeScreen() {
 
   return (
     <div className='homeContainer'>
-      <NavBar/>
       <MiniDrawer />
+      <NavBar/>
       <div className='switchScreen'>
         {loading
         ?
         <>
-        <FeedCard loading={true}/>
         <FeedCard loading={true}/>
         <FeedCard loading={true}/>
         <FeedCard loading={true}/>

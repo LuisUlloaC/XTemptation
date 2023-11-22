@@ -6,6 +6,7 @@ import FolderIcon from '../../assets/folderIcon';
 import CreditCard from '../../assets/creditCArd';
 import PerfilIcon from '../../assets/perfilIcon';
 import ConfigIcon from '../../assets/configIcon';
+import XTemptationIcon from '../../assets/xtemptation';
 
 
 
@@ -14,6 +15,9 @@ export default function MiniDrawer() {
   return (
     <div className='drawer'>
       <div className='list'>
+        <div className='item'>
+          <XTemptationIcon/>
+        </div>
         <div className='item'>
           <HomeIcon/>
           <span>Comenzar</span>
