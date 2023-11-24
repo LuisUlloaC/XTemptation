@@ -1,0 +1,20 @@
+.navigation-bar {
+    display: flex;
+    min-width: 100vw;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: #000;
+    align-items: center;
+    border: 1px solid #580957;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.navigation-bar .pubs {
+    display: flex;
+    min-width: 80%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: 'space-evenly';
+    border-right: 1px solid #058095;
+}

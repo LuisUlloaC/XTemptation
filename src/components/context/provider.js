@@ -8,7 +8,7 @@ export function CustomProvider({ children }) {
   const [state, setState] = useState(savedState ? JSON.parse(savedState) : {});
   const baseURL= "https://tbxxfx0g-8000.euw.devtunnels.ms/"
   const api = axios.create({
-    baseURL: "http://192.168.1.105:8000/"
+    baseURL: "http://192.168.166.33:8000/"
   });
 
   if (state.access) {
@@ -22,6 +22,7 @@ export function CustomProvider({ children }) {
       delete api.defaults.headers.common["Authorization"];
     }
   }, [state]);
+  
   return (
     <Context.Provider value={{ state, setState, api }}>
       {children}

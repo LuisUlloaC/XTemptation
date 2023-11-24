@@ -6,6 +6,7 @@ import ForgotPassword from "./components/session/ForgotPasswordScreen";
 import HomeScreen from "./components/home/Home";
 import { LoginForm } from "./components/session/LoginFormhtml";
 import MyComponent from "./AppRedirect";
+import HomeScreenMobile from "./components/mobile/homeMobile";
 
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
               <Route path="/home" element={<HomeScreen/>}/>
               <Route path="/signup" element={<SignUp/>}/>
               <Route path="/forgotPassword" element={<ForgotPassword/>}/>
+              {/*Mobile screens*/}
+              <Route path="/m.signin" element={<SignInSide/>}/>
+              <Route path="/m.home" element={<HomeScreenMobile/>}/>
           </Routes>
         </Router>
       </CustomProvider>
