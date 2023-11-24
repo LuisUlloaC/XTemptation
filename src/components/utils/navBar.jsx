@@ -29,9 +29,6 @@ export default function NavBar() {
           <CameraIcon/>
         </div>
         <div>
-          <StreamIcon/>
-        </div>
-        <div>
           <UserIcon/>
         </div>
       </div>

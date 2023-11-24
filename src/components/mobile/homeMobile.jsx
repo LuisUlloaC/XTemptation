@@ -1,12 +1,12 @@
 import * as React from 'react';
 import './styles/home.css';
 import FeedCard from '../utils/feedCard';
-import StorieCard from '../utils/storiesCard';
 import { Context } from '../context/provider';
 import { useNavigate } from "react-router-dom";
 import BottomDrawer from './utils/bottomNavMobile';
 import { getPublications } from '../../actions/pubs';
-import NavBar from '../utils/navBar';
+import NavBarMobile from './utils/navBarMobile';
+import FeedCardMobile from './utils/feedCardMobile';
 
 
 export default function HomeScreenMobile() {
@@ -27,28 +27,28 @@ export default function HomeScreenMobile() {
       if (data.sucess) {
         setPublications(data.result);
         setLoading(false)
+      }else{
+        alert("Error de conexion")
       }
     })()
-
-  }, []);
+  }, [api, loading]);
 
   return (
-    <div className='container'>
-      <NavBar/>
+      <div className='container-mobile'>
+      <NavBarMobile/>
+        <BottomDrawer/>
       <div className='switchScreen'>
         {loading
         ?
-        <>
         <FeedCard loading={true}/>
-        </>
         :
         publications.map((pub) => {
-            <FeedCard key={pub.id} loading={false} pub={pub}/>
+            {console.log('here')}
+            <FeedCardMobile key={pub.id} loading={false} pub={pub}/>
         })
         
       }
       </div>
-      <BottomDrawer/>
     </div>
   );
 }

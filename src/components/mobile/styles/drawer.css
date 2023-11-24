@@ -1,11 +1,14 @@
 .mobile-drawer {
     display: flex;
-    flex-direction: row;
     position: absolute;
+    flex-direction: row;
     bottom: 0;
     width: 100%;
-    height: 8%;
-    background-color: aqua;
+    height: 10%;
+    padding-bottom: 2%;
+    background-color: #580957;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .mobile-drawer .list {
