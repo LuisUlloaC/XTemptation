@@ -7,18 +7,20 @@
     width: 100%;
     height: 8%;
     padding-bottom: 2%;
-    background-color: #580957;
+    background-color: var(--white);
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
+    justify-content: center;
 }
 
 .mobile-drawer .list {
     display: flex;
     position: relative;
-    width: 100%;
+    width: 80%;
     height: 100%;
     flex-direction: row;
     justify-content: space-between;
+    justify-items: center;
     align-items: center;
 }
 

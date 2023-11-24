@@ -6,6 +6,9 @@ import LikedIcon from "../../../assets/likedIcon";
 import CommentIcon from "../../../assets/commentIcon";
 import Donate from "../../../assets/donateIcon";
 import colors from "../../../colors";
+import RoundedChat from "../../../assets/news/roundedChatIcon";
+import HeartIcon from "../../../assets/news/heartIcon";
+import SendIcon from "../../../assets/news/sendIcon";
 
 export default function FeedCardMobile({ pub }) {
 
@@ -57,9 +60,9 @@ export default function FeedCardMobile({ pub }) {
         />
       </div>
       <div style={{ display: 'flex', width: '30%', justifyContent: 'space-between', alignItems: 'center', marginTop: '1%' }}>
-        <LikedIcon />
-        <CommentIcon />
-        <Donate />
+        <HeartIcon />
+        <RoundedChat />
+        <SendIcon />
       </div>
       <div style={{display: 'flex', margin: '1.5%'}}>
         <span>{pub.likes} Minha gostosa</span>

@@ -1,10 +1,10 @@
 import * as React from 'react';
 import '../styles/drawer.css';
-import HomeIcon from '../../../assets/homeIcon';
-import BellIcon from '../../../assets/bellIcon';
-import FolderIcon from '../../../assets/folderIcon';
-import CreditCard from '../../../assets/creditCArd';
-import ConfigIcon from '../../../assets/configIcon';
+import PlusButton from '../../../assets/news/olusButton';
+import HouseIcon from '../../../assets/news/houseIcon';
+import UserIcon from '../../../assets/news/newUserIcon';
+import RoundedChatIcon from '../../../assets/news/roundedChatIcon';
+import RoundedBellIcon from '../../../assets/news/roundedBellIcon';
 
 
 
@@ -14,19 +14,19 @@ export default function BottomDrawer() {
     <div className='mobile-drawer'>
       <div className='list'>
         <div className='item'>
-          <BellIcon/>
+          <HouseIcon/>
         </div>
         <div className='item'>
-          <FolderIcon/>
+          <UserIcon/>
         </div>
         <div className='item'>
-          <HomeIcon/>
+          <PlusButton/>
         </div>
         <div className='item'>
-          <CreditCard/>
+          <RoundedChatIcon/>
         </div>
         <div className='item'>
-          <ConfigIcon/>
+          <RoundedBellIcon/>
         </div>
       </div>
     </div>
