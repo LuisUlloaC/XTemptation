@@ -41,14 +41,11 @@ export default function HomeScreen() {
       <MiniDrawer />
       <NavBar/>
       <div className='switchScreen'>
-        {alert(window.navigator.userAgent)}
         <h1>{window.navigator.userAgent}</h1>
         {loading
         ?
         <>
-        <FeedCard loading={true}/>
-        <FeedCard loading={true}/>
-        <FeedCard loading={true}/>
+        <h1>nada</h1>
         </>
         :
         publications.map((pub) => {

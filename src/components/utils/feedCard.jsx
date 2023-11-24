@@ -6,7 +6,7 @@ import LikedIcon from "../../assets/likedIcon";
 import CommentIcon from "../../assets/commentIcon";
 import Donate from "../../assets/donateIcon";
 
-export default function FeedCard({ loading, pub }) {
+export default function FeedCard({ pub }) {
   const VideoJSMemo = React.memo(VideoJS)
 
   const getVideoOption = (arg) => {
@@ -15,8 +15,8 @@ export default function FeedCard({ loading, pub }) {
       controls: true,
       responsive: true,
       fluid: true,
-      width: '80vw',
-      height: '80vh',
+      width: '100%',
+      height: '100%',
       audioOnlyMode: arg.audioOnly,
       sources: [{
         src: arg.src,
@@ -28,29 +28,12 @@ export default function FeedCard({ loading, pub }) {
 
 
   return (
-    <>
-      {loading ?
-        <div className="storie">
-          <div className="card-image">
-            <div className="title pulsate">
-              <UserBadgeIcon/>
-            </div>
-            <div className="storie-content">
-              <div className="content-title pulsate" />
-              <div className="content-subtitle pulsate" />
-              <div className="footer">
-                <div className="circle pulsate" />
-              </div>
-            </div>
-          </div>
-        </div> :
         <div className="feed">
           <div className="header">
           <div className="circle pulsate">
           <UserBadgeIcon/>
           </div>
           <div style={{display: 'flex', flexDirection: 'column'}}>
-
           <div className="title">{pub.title}</div>
           <div className="content-title">{pub.content}</div>
           </div>
@@ -74,9 +57,6 @@ export default function FeedCard({ loading, pub }) {
               <span>{pub.likes} Minha gostosa</span>
             </div>
         </div>
-
-      }
-    </>
 
   );
 }

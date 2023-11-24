@@ -14,7 +14,7 @@ export default function HomeScreenMobile() {
   const navigate = useNavigate();
 
   const { state, setState, api } = React.useContext(Context);
-  const [publications, setPublications] = React.useState(false);
+  const [publications, setPublications] = React.useState([]);
 
   React.useEffect(() => {
     if (!state.access) {
@@ -27,8 +27,6 @@ export default function HomeScreenMobile() {
       if (data.sucess) {
         setPublications(data.result);
         setLoading(false)
-      }else{
-        alert("Error de conexion")
       }
     })()
   }, [api, loading]);
@@ -37,14 +35,17 @@ export default function HomeScreenMobile() {
       <div className='container-mobile'>
       <NavBarMobile/>
         <BottomDrawer/>
-      <div className='switchScreen'>
+      <div className='switchScreen-mobile'>
         {loading
         ?
-        <FeedCard loading={true}/>
+        <>
+        <h1> No hay nada mejo</h1>
+        </>
         :
         publications.map((pub) => {
-            {console.log('here')}
-            <FeedCardMobile key={pub.id} loading={false} pub={pub}/>
+          return(
+            <FeedCardMobile key={pub.id} pub={pub}/>
+            )
         })
         
       }

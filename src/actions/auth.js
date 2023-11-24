@@ -29,3 +29,15 @@ export const userLogin = async (api, email, password) => {
         }
     )
 }
+
+export const userSignIn = async (
+    api, user_name, email, profile_picture, banner_picture, is_active, is_staff, is_content_creator, is_escourt
+    ) => {
+    let sucess = false;
+    let response = null;
+    let result = null;
+
+    await api.post('/accounts/user', {
+        
+    })
+}

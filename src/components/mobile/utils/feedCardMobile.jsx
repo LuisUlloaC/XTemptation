@@ -1,62 +1,69 @@
 import * as React from "react";
 import CardMedia from '@mui/material/CardMedia';
+import VideoJS from "../../utils/VidePlayer";
 import UserBadgeIcon from "../../../assets/userBadge";
 import LikedIcon from "../../../assets/likedIcon";
 import CommentIcon from "../../../assets/commentIcon";
 import Donate from "../../../assets/donateIcon";
+import colors from "../../../colors";
 
-export default function FeedCardMobile({ loading, pub }) {
+export default function FeedCardMobile({ pub }) {
+
+  const VideoJSMemo = React.memo(VideoJS)
+
+  const getVideoOption = (arg) => {
+    return {
+      autoplay: false,
+      controls: true,
+      responsive: true,
+      fluid: true,
+      width: '100%',
+      height: '100%',
+      audioOnlyMode: arg.audioOnly,
+      sources: [{
+        src: arg.src,
+        type: arg.mime
+      }]
+    }
+
+  }
+
+  const videoOptions = React.useMemo(() => {
+    //getVideoOption()
+  })
+
 
   return (
-    <>
-      {loading ?
-        <div className="storie">
-          <div className="card-image">
-            <div className="title pulsate">
-              <UserBadgeIcon/>
-            </div>
-            <div className="storie-content">
-              <div className="content-title pulsate" />
-              <div className="content-subtitle pulsate" />
-              <div className="footer">
-                <div className="circle pulsate" />
-              </div>
-            </div>
-          </div>
-        </div> :
-        <div className="feed">
-          <div className="header">
-          <div className="circle pulsate">
-          <UserBadgeIcon/>
-          </div>
-          <div style={{display: 'flex', flexDirection: 'column'}}>
-
-          <div className="title">{pub.title}</div>
-          <div className="content-title">{pub.content}</div>
-          </div>
-          </div>
-          <div className="card-image">
-            <CardMedia
-              className="inner"
-              component="video"
-              controls
-              image={pub.video}
-            />
-          </div>
-          <div className="content">
-            <div className="actions"> 
-            <LikedIcon/>
-            <CommentIcon/>
-            <Donate/>
-            </div>
-          </div>
-            <div className="footer">
-              <span>{pub.likes} Minha gostosa</span>
-            </div>
+    <div style={{
+      display: 'flex', position: 'relative',
+      flexDirection: 'column', width: '95%',
+      height: '80%', margin: '1%'
+    }}>
+      <div style={{ display: 'flex', padding: '0.5%', marginBottom: '0.5%' }} >
+        <div style={{ display: 'flex', marginRight: '1%' }}>
+          <UserBadgeIcon />
         </div>
-
-      }
-    </>
-
+        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <span >{pub.title}</span>
+          <span style={{ color: colors.feed_darker_purple }}>{pub.content}</span>
+        </div>
+      </div>
+      <div >
+        <CardMedia
+          className="inner"
+          component="video"
+          controls
+          image={pub.video}
+        />
+      </div>
+      <div style={{ display: 'flex', width: '30%', justifyContent: 'space-between', alignItems: 'center', marginTop: '1%' }}>
+        <LikedIcon />
+        <CommentIcon />
+        <Donate />
+      </div>
+      <div style={{display: 'flex', margin: '1.5%'}}>
+        <span>{pub.likes} Minha gostosa</span>
+      </div>
+    </div>
   );
 }
