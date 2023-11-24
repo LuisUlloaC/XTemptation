@@ -7517,6 +7517,13 @@ pkg-up@^3.1.0:
   dependencies:
     find-up "^3.0.0"
 
+platform-ts@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/platform-ts/-/platform-ts-0.1.0.tgz#0fe16aa3d0f1b543110d5ad28ba5a6a7b50d1ed3"
+  integrity sha512-3EF+7dpDdYsdpxwr8Gb93CSjSpd6khfc4QcbWhZwtt99y4+66m4znuOz23QsKCSmClcCtL5Q5i8AJe436EZD6w==
+  dependencies:
+    ua-parser-js "^1.0.33"
+
 postcss-attribute-case-insensitive@^5.0.2:
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/postcss-attribute-case-insensitive/-/postcss-attribute-case-insensitive-5.0.2.tgz#03d761b24afc04c09e757e92ff53716ae8ea2741"
@@ -9630,6 +9637,11 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
+ua-parser-js@^1.0.33:
+  version "1.0.37"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-1.0.37.tgz#b5dc7b163a5c1f0c510b08446aed4da92c46373f"
+  integrity sha512-bhTyI94tZofjo+Dn8SN6Zv8nBDvyXTymAdM3LDI/0IboIUwTu1rEhW7v2TfiVsoYWgkQ4kOVqnI8APUFbIQIFQ==
+
 uglify-js@~2.4.0:
   version "2.4.24"
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.4.24.tgz#fad5755c1e1577658bb06ff9ab6e548c95bebd6e"
@@ -9752,6 +9764,13 @@ use-local-storage@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/use-local-storage/-/use-local-storage-3.0.0.tgz#ecf90952374150f0c65baf027eaaf2062a4c20c6"
   integrity sha512-wlPNnBCG3ULIJMr5A+dvWqLiPWCfsN1Kwijq+sAhT5yV4ex0u6XmZuNwP+RerIOfzBuz1pwSZuzhZMiluGQHfQ==
+
+use-user-agent@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/use-user-agent/-/use-user-agent-0.1.0.tgz#5776d3620313de6c48390d43ac847fab4afa35cf"
+  integrity sha512-SdDtVGIG9Qpj4x4CPSUfSe4W4ZZpb5L5h+TepqkEiO4RC7u+HgPM6LJXZsUE2vHxYtpBlc2g9RkVxjjCuQWQyA==
+  dependencies:
+    platform-ts "0.1.0"
 
 util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   version "1.0.2"

@@ -8,7 +8,7 @@ export function CustomProvider({ children }) {
   const [state, setState] = useState(savedState ? JSON.parse(savedState) : {});
   const baseURL= "https://tbxxfx0g-8000.euw.devtunnels.ms/"
   const api = axios.create({
-    baseURL: "https://tbxxfx0g-8000.euw.devtunnels.ms/"
+    baseURL: "http://192.168.1.105:8000/"
   });
 
   if (state.access) {

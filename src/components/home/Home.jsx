@@ -22,6 +22,10 @@ export default function HomeScreen() {
       navigate("/signin")
     }
 
+
+    console.log(window.navigator.userAgent);
+
+
     (async () => {
       let data = await getPublications(api);
       if (data.sucess) {
@@ -37,6 +41,8 @@ export default function HomeScreen() {
       <MiniDrawer />
       <NavBar/>
       <div className='switchScreen'>
+        {alert(window.navigator.userAgent)}
+        <h1>{window.navigator.userAgent}</h1>
         {loading
         ?
         <>
