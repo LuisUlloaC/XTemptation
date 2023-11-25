@@ -6,9 +6,8 @@ export const Context = createContext(false);
 export function CustomProvider({ children }) {
   const savedState = sessionStorage.getItem('Session');
   const [state, setState] = useState(savedState ? JSON.parse(savedState) : {});
-  const baseURL= "https://tbxxfx0g-8000.euw.devtunnels.ms/"
   const api = axios.create({
-    baseURL: '/'
+    baseURL: 'http://192.168.166.33:8000/'
   });
 
   if (state.access) {

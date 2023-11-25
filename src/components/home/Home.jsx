@@ -4,9 +4,9 @@ import FeedCard from '../utils/feedCard';
 import StorieCard from '../utils/storiesCard';
 import { Context } from '../context/provider';
 import { useNavigate } from "react-router-dom";
-
 import { getPublications } from '../../actions/pubs';
 import NavBar from '../utils/navBar';
+import HomeScreenMobile from '../mobile/homeMobile';
 
 
 export default function HomeScreen() {
@@ -37,65 +37,39 @@ export default function HomeScreen() {
   }, []);
 
   return (
+    <>
+    {state.deviceOS === 'windows' ?
     <div className='homeContainer'>
-      <MiniDrawer />
-      <NavBar/>
-      <div className='switchScreen'>
-        <h1>{window.navigator.userAgent}</h1>
-        {loading
-        ?
-        <>
-        <h1>nada</h1>
-        </>
-        :
-        publications.map((pub) => {
-          return(
-            <FeedCard key={pub.id} loading={false} pub={pub}/>
-          )
-        })
-        
-      }
-        
-      </div>
-      <div className='stories-layout'>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-          <StorieCard loading={true}/>
-      </div>
+    <MiniDrawer />
+    <NavBar/>
+    <div className='switchScreen'>
+      <h1>{window.navigator.userAgent}</h1>
+      {loading
+      ?
+      <>
+      <h1>nada</h1>
+      </>
+      :
+      publications.map((pub) => {
+        return(
+          <FeedCard key={pub.id} loading={false} pub={pub}/>
+        )
+      })
+      
+    }
+      
     </div>
+    <div className='stories-layout'>
+        <StorieCard loading={true}/>
+        <StorieCard loading={true}/>
+    </div>
+  </div>
+
+  : 
+  <HomeScreenMobile/>
+  }
+    
+    </>
+    
   );
 }

@@ -1,12 +1,12 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import SignInSide from "./components/session/SigninScreen";
 import { CustomProvider } from "./components/context/provider";
 import SignUp from "./components/session/SignupScreen";
 import ForgotPassword from "./components/session/ForgotPasswordScreen";
 import HomeScreen from "./components/home/Home";
 import { LoginForm } from "./components/session/LoginFormhtml";
-import MyComponent from "./AppRedirect";
 import HomeScreenMobile from "./components/mobile/homeMobile";
+import AppRedirectComponent from "./AppRedirect";
 
 
 function App() {
@@ -14,7 +14,9 @@ function App() {
       <CustomProvider  >
         <Router >
           <Routes >
-              <Route path="/" element={<MyComponent/>}/>
+              
+              <Route path="*" element={<Navigate to="/m.home" />}/>
+              <Route exact path="/" element={<AppRedirectComponent/>}/>
               <Route path="/signin" element={<SignInSide/>}/>
               <Route path="/test" element={<LoginForm/>}/>
               <Route path="/home" element={<HomeScreen/>}/>
