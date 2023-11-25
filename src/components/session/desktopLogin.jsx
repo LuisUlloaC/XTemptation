@@ -1,18 +1,18 @@
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Context } from '../../context/provider';
-import ErrorAlert from '../../utils/errorAlert';
-import { userLogin } from '../../../actions/auth';
+import { Context } from '../context/provider';
+import ErrorAlert from '../utils/errorAlert';
+import { userLogin } from '../../actions/auth';
 import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import IconButton from '@mui/material/IconButton';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import colors from '../../../colors';
-import TemptationsLogo from '../../../assets/news/temptationsLogo';
+import colors from '../../colors';
+import TemptationsLogo from '../../assets/news/temptationsLogo';
 
-export default function MobileLogin() {
+export default function DesktopLogin() {
   const { state, setState, api } = React.useContext(Context)
   let navigate = useNavigate();
 
@@ -78,13 +78,13 @@ export default function MobileLogin() {
           }}>
             <div style={{
               display: 'flex', flexDirection: 'column',
-              width: '80%', height: '40%',
-              alignItems: 'center', justifyContent: 'center'
+              width: '40%', height: '40%',
+              alignItems: 'center', justifyContent: 'space-evenly'
 
             }}>
               <TemptationsLogo />
               <div style={{ display: 'flex', width: '100%', height: '20%', alignItems: 'center', justifyContent: 'center' }}>
-                <MailOutlineOutlinedIcon style={{ display: 'flez', position: 'absolute', left: '20%' }} />
+                <MailOutlineOutlinedIcon style={{ display: 'flez', position: 'absolute', left: '35%' }} />
                 <Field name="email" type="email" style={{
                   display: 'flex',
                   width: '80%', height: '60%',
@@ -96,7 +96,7 @@ export default function MobileLogin() {
                 {errors.email && touched.email && <ErrorAlert errorBody={errors.email} />}
               </div>
               <div style={{ display: 'flex', width: '100%', height: '20%', alignItems: 'center', justifyContent: 'center' }}>
-                <LockOutlinedIcon style={{ display: 'flez', position: 'absolute', left: '20%' }} />
+                <LockOutlinedIcon style={{ display: 'flez', position: 'absolute', left: '35%' }} />
                 <Field name="password" type="password" style={{
                   display: 'flex', width: '80%',
                   height: '60%', borderRadius: 12, margin: '2%', outline: 'none', textAlign: 'center'
