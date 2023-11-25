@@ -37,7 +37,7 @@ export const userSignIn = async (
     let response = null;
     let result = null;
 
-    await api.post('/accounts/user/', {
+    await api.post('/accounts/users/', {
         "name_user": user_name,
         "email": email,
         "password": password

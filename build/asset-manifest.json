@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.81497fec.css",
+    "main.js": "/static/js/main.03fe4f46.js",
+    "static/js/787.10e7df65.chunk.js": "/static/js/787.10e7df65.chunk.js",
+    "static/media/X-Temptation.svg": "/static/media/X-Temptation.e94ccbe42597068acffb.svg",
+    "static/media/PoetsenOne.ttf": "/static/media/PoetsenOne.9a553614c0458410b697.ttf",
+    "static/media/Amperzand.ttf": "/static/media/Amperzand.e93448a290cd468daf6e.ttf",
+    "index.html": "/index.html",
+    "main.81497fec.css.map": "/static/css/main.81497fec.css.map",
+    "main.03fe4f46.js.map": "/static/js/main.03fe4f46.js.map",
+    "787.10e7df65.chunk.js.map": "/static/js/787.10e7df65.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.81497fec.css",
+    "static/js/main.03fe4f46.js"
+  ]
+}
