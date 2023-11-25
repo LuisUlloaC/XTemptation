@@ -22,24 +22,6 @@ export default function MobileLogin() {
     }
   })
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-
-    (async () => {
-      const response = await userLogin(
-        api,
-        data.get('email'),
-        data.get('password'),
-      )
-      if (response.sucess) {
-        setState(response.state_data)
-        navigate("/");
-      }
-    })()
-
-  };
-
 
   const validationSchema = Yup.object().shape({
     email: Yup.string().email().required('Email requerido'),
@@ -107,6 +89,8 @@ export default function MobileLogin() {
                 <ArrowForwardIosIcon />
               </IconButton>
             </div>
+            <a href='/signup'>Sign Up</a>
+            <a href='/forgotpassword'>Forgot Password</a>
           </div>
         </Form>
       )}

@@ -30,7 +30,7 @@ export const userLogin = async (api, email, password) => {
   };
 };
 
-export const userSignIn = async (
+export const userSignUp = async (
     api, user_name, email, password,
     ) => {
     let sucess = false;
