@@ -1,4 +1,6 @@
 body {
+  display: flex;
+  flex-direction: row;
   margin: 0;
   max-width: 100vw;
   max-height: 100vh;
@@ -12,10 +14,6 @@ body {
   src: local('Amperzand'), url(./assets/Amperzand.ttf) format('truetype');
 }
 
-@font-face {
-  font-family: 'PoetsenOne';
-  src: local('PoetsenOne'), url(./assets/PoetsenOne.ttf) format('truetype');
-}
 
 :root {
   --light_purple: #b21db0;
@@ -51,26 +49,51 @@ body {
   overflow-y: hidden;
 }
 
+.homeContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 .logoFont {
   font-family: Amperzand;
   color: var(--black);
   font-size: 5vw;
 }
 
+.switchScreen {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  justify-content: flex-start;
+  align-items: center;
+  &::-webkit-scrollbar {
+    display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+-ms-overflow-style: none; /* IE and Edge */
+scrollbar-width: none; /* Firefox */
 
+}
 
 
 .stories-layout {
   display: flex;
-  width: 20%;
-  height: 89%;
-  margin-top: 10%;
+  width: 25%;
+  height: 100%;
   margin-bottom: 7%;
   flex-direction: column;
   justify-content: flex-start;
   align-content: start;
   align-items: center;
-  background-color: var(--light_gray);
+  background-color: var(--white);
+  border-left: 1px solid var(--light_gray);
   overflow-y: scroll;
 
   &::-webkit-scrollbar {

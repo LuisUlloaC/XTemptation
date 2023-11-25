@@ -1,13 +1,6 @@
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Context } from '../context/provider';
-import AuthLeftGrid from '../utils/authLetfGrid';
-import FaceboockLogin from '../../assets/facebook';
-import GoogleLogin from '../../assets/google';
-import AppleLogin from '../../assets/apple';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
-import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
 import { userSignUp } from '../../actions/auth';
 import MobileSignUp from '../mobile/session/mobileSignUp';
 import DesktopSignUp from './desktopSignUp';

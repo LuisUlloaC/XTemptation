@@ -32,23 +32,23 @@ export default function HomeScreenMobile() {
   }, [api, loading]);
 
   return (
-      <div className='container-mobile'>
-      <NavBarMobile/>
-        <BottomDrawer/>
+    <div className='container-mobile'>
+      <NavBarMobile />
+      <BottomDrawer />
       <div className='switchScreen-mobile'>
         {loading
-        ?
-        <>
-        <h1> No hay nada mejo</h1>
-        </>
-        :
-        publications.map((pub) => {
-          return(
-            <FeedCardMobile key={pub.id} pub={pub}/>
+          ?
+          <>
+            <h1> No content</h1>
+          </>
+          :
+          publications.map((pub) => {
+            return (
+              <FeedCardMobile key={pub.id} pub={pub} />
             )
-        })
-        
-      }
+          })
+
+        }
       </div>
     </div>
   );

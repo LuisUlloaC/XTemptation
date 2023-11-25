@@ -1,10 +1,10 @@
 import * as React from "react";
 import CardMedia from '@mui/material/CardMedia';
 import VideoJS from "./VidePlayer";
-import UserBadgeIcon from "../../assets/userBadge";
-import LikedIcon from "../../assets/likedIcon";
-import CommentIcon from "../../assets/commentIcon";
-import Donate from "../../assets/donateIcon";
+import UserIcon from "../../assets/news/newUserIcon";
+import HeartIcon from "../../assets/news/heartIcon";
+import RoundedChat from "../../assets/news/roundedChatIcon";
+import SendIcon from "../../assets/news/sendIcon";
 
 export default function FeedCard({ pub }) {
   const VideoJSMemo = React.memo(VideoJS)
@@ -31,7 +31,7 @@ export default function FeedCard({ pub }) {
         <div className="feed">
           <div className="header">
           <div className="circle pulsate">
-          <UserBadgeIcon/>
+          <UserIcon/>
           </div>
           <div style={{display: 'flex', flexDirection: 'column'}}>
           <div className="title">{pub.title}</div>
@@ -48,9 +48,9 @@ export default function FeedCard({ pub }) {
           </div>
           <div className="content">
             <div className="actions"> 
-            <LikedIcon/>
-            <CommentIcon/>
-            <Donate/>
+            <HeartIcon/>
+            <RoundedChat/>
+            <SendIcon/>
             </div>
           </div>
             <div className="footer">

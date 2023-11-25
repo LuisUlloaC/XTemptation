@@ -5,7 +5,6 @@ import StorieCard from '../utils/storiesCard';
 import { Context } from '../context/provider';
 import { useNavigate } from "react-router-dom";
 import { getPublications } from '../../actions/pubs';
-import NavBar from '../utils/navBar';
 import HomeScreenMobile from '../mobile/homeMobile';
 
 
@@ -41,7 +40,6 @@ export default function HomeScreen() {
     {state.deviceOS === 'windows' ?
     <div className='homeContainer'>
     <MiniDrawer />
-    <NavBar/>
     <div className='switchScreen'>
       <h1>{window.navigator.userAgent}</h1>
       {loading

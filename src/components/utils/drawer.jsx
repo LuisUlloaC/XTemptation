@@ -1,14 +1,14 @@
 import * as React from 'react';
-import HomeIcon from '../../assets/homeIcon';
-import BellIcon from '../../assets/bellIcon';
-import ChatIcon from '../../assets/chatIcon';
-import FolderIcon from '../../assets/folderIcon';
-import CreditCard from '../../assets/creditCArd';
-import PerfilIcon from '../../assets/perfilIcon';
-import ConfigIcon from '../../assets/configIcon';
-import XTemptationIcon from '../../assets/xtemptation';
-
-
+import TemptationsLogo from '../../assets/news/temptationsLogo';
+import HouseIcon from '../../assets/news/houseIcon';
+import RoundedBellIcon from '../../assets/news/roundedBellIcon';
+import RoundedChat from '../../assets/news/roundedChatIcon';
+import UserIcon from '../../assets/news/newUserIcon';
+import StonkIcon from '../../assets/news/stonksIcon';
+import PromoIcon from '../../assets/news/promoIcon';
+import ConfigIcon from '../../assets/news/configIcon';
+import HelpIcon from '../../assets/news/helpIcon';
+import NewPubIcon from '../../assets/news/newPubIcon';
 
 export default function MiniDrawer() {
 
@@ -16,35 +16,55 @@ export default function MiniDrawer() {
     <div className='drawer'>
       <div className='list'>
         <div className='item'>
-          <XTemptationIcon/>
+          <TemptationsLogo/>
         </div>
         <div className='item'>
-          <HomeIcon/>
-          <span>Comenzar</span>
+          <HouseIcon/>
+          <div style={{display: 'flex', width: '70%'}}>
+          <span>Inicio</span>
+          </div>
         </div>
         <div className='item'>
-          <BellIcon/>
-          <span>Notificacion</span>
+          <RoundedBellIcon/>
+          <div style={{display: 'flex', width: '70%', marginleft: '2%'}}>
+          <span>Notificaciones</span>
+          </div>
         </div>
         <div className='item'>
-          <ChatIcon/>
-          <span>Message</span>
+          <RoundedChat/>
+          <div style={{display: 'flex', width: '70%', marginleft: '2%'}}>
+          <span>Chat</span>
+          </div>
         </div>
         <div className='item'>
-          <FolderIcon/>
-          <span>Collecciones</span>
+          <UserIcon/>
+          <div style={{display: 'flex', width: '70%', marginleft: '2%'}}>
+          <span>Perfil</span>
+          </div>
         </div>
         <div className='item'>
-          <CreditCard/>
-          <span>Card</span>
+          <StonkIcon/>
+          <div style={{display: 'flex', width: '70%', marginleft: '2%'}}>
+          <span>Declaraciones</span>
+          </div>
         </div>
         <div className='item'>
-          <PerfilIcon/>
-          <span>Profile</span>
+          <PromoIcon/>
+          <div style={{display: 'flex', width: '70%', marginleft: '2%'}}>
+          <span>Promociones</span>
+          </div>
         </div>
         <div className='item'>
           <ConfigIcon/>
-          <span>Config</span>
+          <div style={{display: 'flex', width: '70%', marginleft: '2%'}}>
+          <span>Configuracion</span>
+          </div>
+        </div>
+        <div className='item'>
+          <HelpIcon/>
+          <div style={{display: 'flex', width: '70%', marginleft: '2%'}}>
+          <span>Ayuda</span>
+          </div>
         </div>
       </div>
     </div>

@@ -1,14 +1,11 @@
 import * as React from "react";
 import CardMedia from '@mui/material/CardMedia';
 import VideoJS from "../../utils/VidePlayer";
-import UserBadgeIcon from "../../../assets/userBadge";
-import LikedIcon from "../../../assets/likedIcon";
-import CommentIcon from "../../../assets/commentIcon";
-import Donate from "../../../assets/donateIcon";
 import colors from "../../../colors";
 import RoundedChat from "../../../assets/news/roundedChatIcon";
 import HeartIcon from "../../../assets/news/heartIcon";
 import SendIcon from "../../../assets/news/sendIcon";
+import UserIcon from "../../../assets/news/newUserIcon";
 
 export default function FeedCardMobile({ pub }) {
 
@@ -44,7 +41,7 @@ export default function FeedCardMobile({ pub }) {
     }}>
       <div style={{ display: 'flex', padding: '0.5%', marginBottom: '0.5%' }} >
         <div style={{ display: 'flex', marginRight: '1%' }}>
-          <UserBadgeIcon />
+          <UserIcon />
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <span >{pub.title}</span>
