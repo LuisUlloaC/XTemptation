@@ -4,7 +4,7 @@ export const getPublications = async (api) => {
     let result = null;
     let response = null;
     let sucess = false;
-    await api.get('/publications/pub')
+    await api.get('/publications/pub/')
     .then(res => {
         response = res;
         result = res.data;

@@ -7,7 +7,7 @@ export function CustomProvider({ children }) {
   const savedState = sessionStorage.getItem('Session');
   const [state, setState] = useState(savedState ? JSON.parse(savedState) : {});
   const api = axios.create({
-    baseURL: 'http://192.168.166.33:8000/'
+    baseURL: '/'
   });
 
   if (state.access) {
