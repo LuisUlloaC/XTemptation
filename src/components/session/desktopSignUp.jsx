@@ -41,11 +41,9 @@ export default function MobileSignUp() {
       onSubmit={async values => {
         let response = await userSignUp(api,values.user_name, values.email, values.password)
         if (response.sucess) {
-          setState(response.state_data)
+          setState(response.result)
           navigate("/");
         }
-        alert(JSON.stringify(values))
-
       }}
     >
       {({ errors, touched }) => (

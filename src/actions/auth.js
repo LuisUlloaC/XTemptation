@@ -58,3 +58,60 @@ export const userSignUp = async (
         result: result
     })
 }
+
+export const userSendRestorecode = async (
+    api, email
+    ) => {
+    let sucess = false;
+    let response = null;
+    let result = null;
+
+    await api.post('/accounts/send_email/', {
+        "receiver": email
+    })
+    .then(res => {
+        sucess = true;
+        response = res;
+        result = res.data
+    })
+    .catch(res => {
+        sucess = false;
+        response = res
+    })
+
+    return ({
+        sucess: sucess,
+        response: response,
+        result: result
+    })
+}
+
+
+export const userChangePassword = async (
+    api, email, code, new_password
+    ) => {
+    let sucess = false;
+    let response = null;
+    let result = null;
+
+    await api.post('/accounts/send_email/', {
+        "email": email,
+        "code": code,
+        "new_password": new_password
+    })
+    .then(res => {
+        sucess = true;
+        response = res;
+        result = res.data
+    })
+    .catch(res => {
+        sucess = false;
+        response = res
+    })
+
+    return ({
+        sucess: sucess,
+        response: response,
+        result: result
+    })
+}
