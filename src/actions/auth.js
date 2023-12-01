@@ -94,7 +94,7 @@ export const userChangePassword = async (
     let response = null;
     let result = null;
 
-    await api.post('/accounts/send_email/', {
+    await api.post('/accounts/restore_pswd/', {
         "email": email,
         "code": code,
         "new_password": new_password

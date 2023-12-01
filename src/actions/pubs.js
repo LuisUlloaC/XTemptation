@@ -74,3 +74,20 @@ export const getPublicationsByUser = async (api, user_id) => {
         }
     )
 }
+
+export const likePublication = async (api, pub_id) => {
+    let sucess = false;
+    let response = null;
+
+    await api.post('/publications/pub/'+pub_id+'/publication_like/')
+    .then( res => {
+        sucess = true;
+        response = res;
+    })
+    .catch(res =>{
+        sucess = false;
+        response = res;
+    })
+
+    return({sucess: sucess, response: response})
+}

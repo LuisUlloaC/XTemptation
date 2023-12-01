@@ -1,11 +1,12 @@
 import * as React from 'react';
 import MiniDrawer from '../utils/drawer';
 import FeedCard from '../utils/feedCard';
-import StorieCard from '../utils/storiesCard';
+import StoriesAvatars from '../utils/createStorie';
 import { Context } from '../context/provider';
 import { useNavigate } from "react-router-dom";
 import { getPublications } from '../../actions/pubs';
 import HomeScreenMobile from '../mobile/homeMobile';
+import Storie from '../utils/storieAvatar';
 
 
 export default function HomeScreen() {
@@ -41,25 +42,26 @@ export default function HomeScreen() {
     <div className='homeContainer'>
     <MiniDrawer />
     <div className='switchScreen'>
-      <h1>{window.navigator.userAgent}</h1>
       {loading
       ?
       <>
       <h1>nada</h1>
       </>
       :
-      publications.map((pub) => {
+      <>
+      <div style={{display: 'flex', height: '12%',width: '100%', paddingLeft: '2%'}}>
+        <Storie loading={true}/>
+      </div>
+      {publications.map((pub) => {
         return(
           <FeedCard key={pub.id} loading={false} pub={pub}/>
-        )
-      })
-      
-    }
-      
+          )
+        })}
+      </>
+      }
     </div>
     <div className='stories-layout'>
-        <StorieCard loading={true}/>
-        <StorieCard loading={true}/>
+      <Storie loading={true}/>
     </div>
   </div>
 
