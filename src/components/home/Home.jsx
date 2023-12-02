@@ -61,7 +61,7 @@ export default function HomeScreen() {
       }
     </div>
     <div className='stories-layout'>
-      <Storie loading={true}/>
+      <h1>Here comes the news</h1>
     </div>
   </div>
 
