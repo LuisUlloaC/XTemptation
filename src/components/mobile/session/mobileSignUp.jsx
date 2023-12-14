@@ -44,8 +44,6 @@ export default function MobileSignUp() {
           setState(response.state_data)
           navigate("/");
         }
-        alert(JSON.stringify(values))
-
       }}
     >
       {({ errors, touched }) => (

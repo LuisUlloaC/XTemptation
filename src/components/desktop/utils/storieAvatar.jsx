@@ -29,7 +29,7 @@ export default function Storie({ user }) {
                 variant=''
                 sx={{
                     flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', maxWidth: 70,
-                    paddingTop: '1%', maxHeight: 70
+                    paddingTop: '1%', maxHeight: 70, marginRight: '2%'
                 }}
             >
                 <Avatar alt="pic" style={{ display: 'flex',height: '100%', width: '100%'}} src={user?.profile_picture} />

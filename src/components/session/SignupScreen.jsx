@@ -1,37 +1,11 @@
 import * as React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Context } from '../context/provider';
-import { userSignUp } from '../../actions/auth';
 import MobileSignUp from '../mobile/session/mobileSignUp';
-import DesktopSignUp from './desktopSignUp';
+import DesktopSignUp from '../desktop/session/desktopSignUp';
 
 
 const SignUp = () => {
-  let navigate = useNavigate();
-  const {  state, setState, api } = React.useContext(Context)
-  const [ setWrongCredentials] = React.useState(false)
-
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-
-    (async () => {
-    const response = await userSignUp(
-      api,
-      data.get('name_user'),
-      data.get('email'),
-      data.get('password'),
-    )
-    if (response.sucess) {
-      setState(response.state_data)
-      navigate("/home");
-    } else {
-      setWrongCredentials(true);
-    }
-    })()
-
-  };
+  const { state } = React.useContext(Context);
 
   return (
     <>
@@ -40,7 +14,6 @@ const SignUp = () => {
     <DesktopSignUp/>
   : <MobileSignUp/>
   }
-
     </>
   );
 }

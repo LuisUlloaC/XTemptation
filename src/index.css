@@ -76,8 +76,7 @@ body {
   &::-webkit-scrollbar {
     display: none;
 }
-/* Hide scrollbar for IE, Edge and Firefox */
--ms-overflow-style: none; /* IE and Edge */
+
 scrollbar-width: none; /* Firefox */
 
 }
@@ -87,22 +86,20 @@ scrollbar-width: none; /* Firefox */
   display: flex;
   width: 25%;
   height: 100%;
-  margin-bottom: 7%;
+  padding: 1%;
   flex-direction: column;
   justify-content: flex-start;
-  align-content: start;
+  align-content: flex-start;
   align-items: center;
   background-color: var(--white);
-  border-left: 1px solid var(--light_gray);
+  border-left: var(--light_gray);
   overflow-y: scroll;
 
   &::-webkit-scrollbar {
     display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
--ms-overflow-style: none; /* IE and Edge */
-scrollbar-width: none; /* Firefox */
+scrollbar-width: none;
 
 }
 

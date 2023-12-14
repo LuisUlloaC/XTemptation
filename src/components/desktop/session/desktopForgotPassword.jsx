@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Context } from '../context/provider';
-import ErrorAlert from '../utils/errorAlert';
+import { Context } from '../../context/provider';
+import ErrorAlert from '../../utils/errorAlert';
 import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import IconButton from '@mui/material/IconButton';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import colors from '../../colors';
-import TemptationsLogo from '../../assets/news/temptationsLogo';
-import { userChangePassword, userSendRestorecode } from '../../actions/auth';
+import colors from '../../../colors';
+import TemptationsLogo from '../../../assets/news/temptationsLogo';
+import { userChangePassword, userSendRestorecode } from '../../../actions/auth';
 
 export default function DesktopForgotPassword() {
   const { state, api } = React.useContext(Context);

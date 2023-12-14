@@ -1,6 +1,5 @@
 import * as React from 'react';
 import './styles/home.css';
-import FeedCard from '../utils/feedCard';
 import { Context } from '../context/provider';
 import { useNavigate } from "react-router-dom";
 import BottomDrawer from './utils/bottomNavMobile';
@@ -13,14 +12,13 @@ export default function HomeScreenMobile() {
   const [loading, setLoading] = React.useState(true);
   const navigate = useNavigate();
 
-  const { state, setState, api } = React.useContext(Context);
+  const { state, api } = React.useContext(Context);
   const [publications, setPublications] = React.useState([]);
 
   React.useEffect(() => {
     if (!state.access) {
       navigate("/signin")
     }
-
 
     (async () => {
       let data = await getPublications(api);
@@ -29,7 +27,7 @@ export default function HomeScreenMobile() {
         setLoading(false)
       }
     })()
-  }, [api, loading]);
+  }, [api, loading, state.access, navigate]);
 
   return (
     <div className='container-mobile'>

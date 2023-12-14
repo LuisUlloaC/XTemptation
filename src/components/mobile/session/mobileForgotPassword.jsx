@@ -11,7 +11,7 @@ import colors from '../../../colors';
 import TemptationsLogo from '../../../assets/news/temptationsLogo';
 
 export default function MobileForgotPassword() {
-  const { state, setState, api } = React.useContext(Context)
+  const { state } = React.useContext(Context)
   let navigate = useNavigate();
 
   React.useEffect(() => {

@@ -7,7 +7,7 @@ export function CustomProvider({ children }) {
   const savedState = sessionStorage.getItem('Session');
   const [state, setState] = useState(savedState ? JSON.parse(savedState) : {});
   const api = axios.create({
-    baseURL: 'http://192.168.1.101:8000/'
+    baseURL: 'http://192.168.1.100:8000/'
   });
 
   if (state.access) {
@@ -20,7 +20,7 @@ export function CustomProvider({ children }) {
     } else {
       delete api.defaults.headers.common["Authorization"];
     }
-  }, [state]);
+  }, [state, api.defaults.headers.common]);
   
   return (
     <Context.Provider value={{ state, setState, api }}>

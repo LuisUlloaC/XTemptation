@@ -1,37 +1,12 @@
 import * as React from "react";
-import CardMedia from '@mui/material/CardMedia';
-import VideoJS from "../../utils/VidePlayer";
 import colors from "../../../colors";
 import RoundedChat from "../../../assets/news/roundedChatIcon";
 import HeartIcon from "../../../assets/news/heartIcon";
 import SendIcon from "../../../assets/news/sendIcon";
 import UserIcon from "../../../assets/news/newUserIcon";
+import ReactPlayer from 'react-player';
 
 export default function FeedCardMobile({ pub }) {
-
-  const VideoJSMemo = React.memo(VideoJS)
-
-  const getVideoOption = (arg) => {
-    return {
-      autoplay: false,
-      controls: true,
-      responsive: true,
-      fluid: true,
-      width: '100%',
-      height: '100%',
-      audioOnlyMode: arg.audioOnly,
-      sources: [{
-        src: arg.src,
-        type: arg.mime
-      }]
-    }
-
-  }
-
-  const videoOptions = React.useMemo(() => {
-    //getVideoOption()
-  })
-
 
   return (
     <div style={{
@@ -49,11 +24,11 @@ export default function FeedCardMobile({ pub }) {
         </div>
       </div>
       <div >
-        <CardMedia
-          className="inner"
-          component="video"
+      <ReactPlayer
+          height="100%"
+          width="100%"
+          url={pub.video}
           controls
-          image={pub.video}
         />
       </div>
       <div style={{ display: 'flex', width: '30%', justifyContent: 'space-between', alignItems: 'center', marginTop: '1%' }}>

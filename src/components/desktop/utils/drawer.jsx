@@ -1,14 +1,13 @@
 import * as React from 'react';
-import TemptationsLogo from '../../assets/news/temptationsLogo';
-import HouseIcon from '../../assets/news/houseIcon';
-import RoundedBellIcon from '../../assets/news/roundedBellIcon';
-import RoundedChat from '../../assets/news/roundedChatIcon';
-import UserIcon from '../../assets/news/newUserIcon';
-import StonkIcon from '../../assets/news/stonksIcon';
-import PromoIcon from '../../assets/news/promoIcon';
-import ConfigIcon from '../../assets/news/configIcon';
-import HelpIcon from '../../assets/news/helpIcon';
-import NewPubIcon from '../../assets/news/newPubIcon';
+import TemptationsLogo from '../../../assets/news/temptationsLogo';
+import HouseIcon from '../../../assets/news/houseIcon';
+import RoundedBellIcon from '../../../assets/news/roundedBellIcon';
+import RoundedChat from '../../../assets/news/roundedChatIcon';
+import UserIcon from '../../../assets/news/newUserIcon';
+import StonkIcon from '../../../assets/news/stonksIcon';
+import PromoIcon from '../../../assets/news/promoIcon';
+import ConfigIcon from '../../../assets/news/configIcon';
+import HelpIcon from '../../../assets/news/helpIcon';
 
 export default function MiniDrawer() {
 

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Context } from '../context/provider';
 import MobileLogin from '../mobile/session/mobileLogin';
-import DesktopLogin from './desktopLogin';
+import DesktopLogin from '../desktop/session/desktopLogin';
 
 
 export default function SignPrimary() {

@@ -1,18 +1,19 @@
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Context } from '../context/provider';
-import ErrorAlert from '../utils/errorAlert';
-import { userLogin } from '../../actions/auth';
+import { Context } from '../../context/provider';
+import ErrorAlert from '../../utils/errorAlert';
+import { userSignUp } from '../../../actions/auth';
 import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import IconButton from '@mui/material/IconButton';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import colors from '../../colors';
-import TemptationsLogo from '../../assets/news/temptationsLogo';
+import colors from '../../../colors';
+import TemptationsLogo from '../../../assets/news/temptationsLogo';
 
-export default function DesktopLogin() {
+export default function MobileSignUp() {
   const { state, setState, api } = React.useContext(Context)
   let navigate = useNavigate();
 
@@ -22,26 +23,27 @@ export default function DesktopLogin() {
     }
   })
 
+
   const validationSchema = Yup.object().shape({
-    email: Yup.string().email().required('Email requerido'),
-    password: Yup.string().required('Password requerido')
+    user_name: Yup.string().required('Username required'),
+    email: Yup.string().email().required('Email required'),
+    password: Yup.string().required('Password required')
   });
 
   return (
     <Formik
       initialValues={{
+        user_name: "",
         email: "",
         password: ""
       }}
       validationSchema={validationSchema}
       onSubmit={async values => {
-        let response = await userLogin(api, values.email, values.password)
+        let response = await userSignUp(api,values.user_name, values.email, values.password)
         if (response.sucess) {
-          setState(response.state_data)
+          setState(response.result)
           navigate("/");
         }
-        alert(JSON.stringify(values))
-
       }}
     >
       {({ errors, touched }) => (
@@ -60,10 +62,22 @@ export default function DesktopLogin() {
             <div style={{
               display: 'flex', flexDirection: 'column',
               width: '40%', height: '40%',
-              alignItems: 'center', justifyContent: 'space-evenly'
+              alignItems: 'center', justifyContent: 'center'
 
             }}>
               <TemptationsLogo />
+              <div style={{ display: 'flex', width: '100%', height: '20%', alignItems: 'center', justifyContent: 'center' }}>
+                <PermIdentityOutlinedIcon style={{ display: 'flez', position: 'absolute', left: '35%' }}/>
+                <Field name="user_name"  style={{
+                  display: 'flex',
+                  width: '80%', height: '60%',
+                  borderRadius: 12,
+                  margin: '2%',
+                  outline: 'none',
+                  textAlign: 'center'
+                }} />
+                {errors.user_name && touched.user_name && <ErrorAlert errorBody={errors.user_name} />}
+              </div>
               <div style={{ display: 'flex', width: '100%', height: '20%', alignItems: 'center', justifyContent: 'center' }}>
                 <MailOutlineOutlinedIcon style={{ display: 'flez', position: 'absolute', left: '35%' }} />
                 <Field name="email" type="email" style={{
@@ -88,8 +102,14 @@ export default function DesktopLogin() {
                 <ArrowForwardIosIcon />
               </IconButton>
             </div>
-            <a href='/signup'>Sign Up</a>
-            <a href='/forgotpassword'>Forgot Password</a>
+            <div style={{display:'flex', flexDirection: 'column', width:'100%', justifyContent: 'center', alignItems: 'center'}} >
+                    <p style={{color: 'gray', height: '40%', width: '80%', flexWrap: 'wrap', justifyContent: 'center', textAlign: 'center'}}>
+                      Ao se inscrever, você concorda com nossos <a style={{color: 'blue'}}  href="/forgotPassword">Termos de Serviço e Política de Privacidade </a> 
+                      e confirma que tem pelo menos 18 anos de idade.
+                    </p>
+                    <p style={{color: 'gray'}}> Você já tem uma conta?<a href='/' style={{color: 'blue'}}>Iniciar sessão</a> </p>
+                    
+                </div>
           </div>
         </Form>
       )}
